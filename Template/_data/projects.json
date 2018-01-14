@@ -1,0 +1,29 @@
+{
+    "projects":[
+        {
+            "title":"Made a resume website",
+            "short_description":"I started up a resume site.",
+            "url":"https://github.com/TheFlyingCaveman/Simple-Resume",
+            "notes": [
+                {
+                    "content":"This is a placeholder note."
+                }
+            ],
+            "tagGroups": [
+                {
+                    "name": "Technologies",
+                    "tags": [
+                        {
+                            "display":"Jekyll",
+                            "url":"https://jekyllrb.com/"
+                        },
+                        {
+                            "display":"GitHub",
+                            "url":"https://github.com/"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

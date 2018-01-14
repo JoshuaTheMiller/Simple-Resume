@@ -1,0 +1,44 @@
+{
+    "employers":[
+        {
+            "title":"Fake Employer",
+            "url":"http://example.com",
+            "short_description":"This place really doesn't exist.",
+            "position":"Faker",
+            "notes": [
+                {
+                    "content":"Did stuff."
+                },
+                {
+                    "content":"Did other stuff."
+                }
+            ],
+            "tagGroups": [
+                {
+                    "name": "Technologies",
+                    "tags": [
+                        {
+                            "display":"The internet"
+                        },
+                        {
+                            "display":"Google",
+                            "url":"https://www.google.com"
+                        }
+                    ]
+                },
+                {
+                    "name": "Skills",
+                    "tags": [
+                        {
+                            "display":"Using themes"                            
+                        },
+                        {
+                            "display":"Agile",
+                            "url":"https://en.wikipedia.org/wiki/Agile_software_development"                            
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

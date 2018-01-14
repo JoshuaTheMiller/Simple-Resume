@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>        
+    <head>
+        {% include head.html %}
+    </head>    
+    <body>                       
+        <header>
+            {% include profile-block.html %}
+        </header>        
+        <main>
+            {{ content }}   
+        </main>
+        <footer>
+            {% include site-footer.html %}
+        </footer>   
+        {% include scripts.html %}
+        <button class="print-button" onclick="window.print();return false;"><img class="print-button-image" src="/images/icon_printer.svg"/></button>     
+    </body>       
+</html>

@@ -1,0 +1,28 @@
+---
+layout: default
+title: Resume
+permalink: /
+---
+<section class="experience-block">
+    <h1>Recent Projects</h1>
+    {% for project in site.data.projects.projects %}
+        {% include template-project.html 
+            title=project.title
+            subtitle=project.short_description 
+            notes=project.notes
+            tagGroups=project.tagGroups
+            url=project.url %}
+    {% endfor %}    
+</section>
+<section class="experience-block">
+    <h1>Employment History</h1>    
+    {% for employer in site.data.employment.employers %}
+        {% include template-employer.html 
+            title=employer.title 
+            position=employer.position
+            subtitle=employer.short_description 
+            notes=employer.notes 
+            url=employer.url 
+            tagGroups=employer.tagGroups %}
+    {% endfor %}
+</section>

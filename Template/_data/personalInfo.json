@@ -1,0 +1,35 @@
+{
+    "firstName":"ImNot",
+    "lastName": "ARealPerson",
+    "profileImagePath":"images/profile.png",
+    "description":"I am currently not real and this is just placeholder text.",
+    "personalLinks": [
+        {
+            "displayText":"example@example.com",
+            "url":"mailto:example@example.com?Subject=I%20noticed%20your%20resume%20site...",
+            "targetType":"_top"
+        }
+    ],
+    "iconLinks": [
+        {
+            "displayText":"Medium",
+            "displayImagePath":"images/icon_medium.png",
+            "url":"https://medium.com/@aflyingcaveman"
+        },
+        {
+            "displayText":"LinkedIn",
+            "displayImagePath":"images/icon_linkedin.png",
+            "url":"https://www.linkedin.com/in/joshuadmiller/"
+        },
+        {
+            "displayText":"GitHub",
+            "displayImagePath":"images/icon_github.svg",
+            "url":"https://github.com/TheFlyingCaveman"
+        },
+        {
+            "displayText":"Thingiverse",
+            "displayImagePath":"images/icon_thingiverse.png",
+            "url":"https://www.thingiverse.com/TheFlyingCaveman/"
+        }
+    ]
+}

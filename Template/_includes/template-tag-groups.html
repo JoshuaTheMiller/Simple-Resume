@@ -1,0 +1,15 @@
+{% for group in include.tagGroups %}
+    <p>       
+        {{ group.name }}:
+        {% for tag in group.tags %}
+            {% if tag.url %}
+            <a href="{{ tag.url }}" target="_blank">{{ tag.display }}</a>
+            {% else %}
+            <span>{{ tag.display }}</span>
+            {% endif %}            
+            {% if forloop.last == false %}
+            |
+            {% endif %}
+        {% endfor %}
+    </p>
+{% endfor %}

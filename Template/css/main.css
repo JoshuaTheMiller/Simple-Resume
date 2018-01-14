@@ -1,0 +1,258 @@
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+    /* Background pattern from www.toptal.com/designers/subtlepatterns/  */
+    background-image: url("../images/circles-light.png");    
+    background-repeat: repeat;
+    /* Eh this is how I made the font choice: https://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html */
+    font-family: "Helvetica";
+}
+
+body {
+    display:grid;   
+    grid-template-columns: 1fr 20fr 1fr;
+    grid-template-rows: auto auto;     
+    grid-template-areas:        
+        "header header header"
+        ". main .";
+    justify-content: center;    
+    align-items: start;
+}
+
+header {   
+    grid-area: header;  
+    padding:10px;     
+}
+
+main {
+    grid-area: main;          
+    position: relative;  
+    padding: 0px;   
+    padding-bottom: 50px; /* Offsetting by the height of the footer otherwise the footer would cover the bottom text */            
+}
+
+footer {        
+    position: fixed;
+    text-align: center;
+    align-content: center;    
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    background: white;
+    opacity: .6;
+    font-size: 12px;    
+}
+
+footer p {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 18px;
+}
+
+a:link, a:visited, a:active {
+    color: darkslategrey;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.content {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 0px; 
+}
+
+.content p, ul {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+}
+
+/* Profile Header Block
+-------------------------------------------------------------- */
+
+.profile-block {
+    display: grid;    
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "profile-image"
+        "profile-links"
+        "profile-description";   
+    justify-content: stretch;    
+    grid-gap: 5px;          
+}
+
+.profile-image-container {
+    grid-area: profile-image;    
+    justify-self: center;    
+}
+
+.profile-links-container {
+    grid-area: profile-links;     
+    justify-self: center;
+    display: grid;    
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 6px;    
+}
+
+.profile-description-container {
+    grid-area: profile-description;
+    align-self: center;
+    justify-self: left; 
+    text-align: center;    
+}
+
+.profile-image {
+    border-radius: 15% 15% 15% 15%;  
+    height: 200px;
+    width: 200px;      
+}
+
+.profile-title {
+    margin: 0px;
+}
+
+.profile-block p {
+    margin: 4px 0px;
+}
+
+/* -------------------------------------------------------------- */
+
+/* Experience Block
+-------------------------------------------------------------- */
+.experience-block h1 {
+    color: black;    
+    margin-bottom: 5px;
+    border-bottom-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, .05);
+}
+
+.experience-entry {
+    padding-left: 10px;
+    margin-left: 5px;    
+    margin-top: 15px;
+}
+
+.experience-entry h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: none;    
+}
+
+.experience-entry-link {
+    display: none;
+    visibility: hidden;
+}
+
+/* -------------------------------------------------------------- */
+
+.print-button {    
+    background-color: white;
+    border: none;            
+    padding: 5px;    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;    
+    position: fixed;   
+    border-radius: 50%;
+    left: 100% - 20px;
+    margin: 5px;
+    right: 0;    
+    bottom: 0;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.print-button-image {
+    height: 25px;
+    width: 25px;    
+    border-style: none;
+}
+
+.print-button:hover {
+    background-color: rgba(112, 128, 144, .25);
+}
+
+@media print {
+    .profile-block {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 90% 10%;
+        grid-template-areas: 
+            "profile-description profile-description"
+            "profile-description profile-description";  
+        justify-content: stretch;  
+    }
+
+    .profile-image-container, .profile-links-container, .print-button, footer {
+        display: none;
+        visibility: hidden;
+    }
+
+    body {
+        display: initial;
+    }
+
+    header, main, h1, .experience-entry {            
+        padding: 0px;  
+        margin: 0px;                     
+    }
+
+    a:link, a:visited, a:active, a:active {
+        color: black;
+        text-decoration: none;
+    }
+    
+    h1 {
+        font-size: 14px;
+    }
+
+    p, li {
+        font-size: 12px;
+    }
+
+    .experience-entry {        
+        padding-left: 10px;
+        margin-left: 5px;
+    }
+
+    .experience-entry-link {
+        display: block;
+        visibility: visible;
+        font-size: 10px;       
+        margin: 0px;
+        padding: 0px; 
+        font-weight: lighter;
+    }
+}
+
+@media print, screen and (min-width: 948px) {        
+    .profile-description-container {
+        text-align: left;    
+    }
+}
+
+@media only screen and (min-width: 948px) {        
+    body {        
+        grid-template-columns: 1fr 1fr repeat(8, 1fr) 1fr 1fr;
+        grid-template-rows: auto auto;     
+        grid-template-areas:        
+            ". . header header header header header header header header . ."
+            ". . . main main main main main main . . .";        
+    }
+
+    .profile-block {        
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+            "profile-image profile-description"
+            "profile-links profile-description";  
+    }
+}

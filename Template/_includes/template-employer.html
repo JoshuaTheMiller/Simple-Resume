@@ -1,0 +1,18 @@
+<section class="experience-entry">
+    <h1><a href="{{ include.url }}" target="_blank">{{ include.title }}</a></h1>
+    <div class="content">    
+        <p>{{ include.position }}</p>
+        <p>{{ include.subtitle }}</p>
+        {% if include.notes %}
+        <ul>
+        {% for note in include.notes %}
+            <li>{{ note.content }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        {% if include.tagGroups %}        
+        {% include template-tag-groups.html 
+            tagGroups=include.tagGroups %}        
+        {% endif %}
+    </div>
+</section>
