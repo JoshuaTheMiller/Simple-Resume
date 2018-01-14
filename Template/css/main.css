@@ -6,8 +6,10 @@ body {
     /* Background pattern from www.toptal.com/designers/subtlepatterns/  */
     background-image: url("../images/circles-light.png");    
     background-repeat: repeat;
-    /* Eh this is how I made the font choice: https://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html */
-    font-family: "Helvetica";
+    /* Eh this is how I made the initial font choice: https://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html */
+    /* font-family: "Helvetica"; */
+    /* I then liked the look of this better: */
+    font-family: 'Raleway', sans-serif;
 }
 
 body {
