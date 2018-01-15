@@ -6,8 +6,11 @@ layout: compress
     <head>
         {% include head.html %}
     </head>    
-    <body>                       
+    <body>                                 
         <header>
+            {% if site.in-development %}  
+            <h1 id="under-construction-banner">This site is currently under construction!</h1> 
+            {% endif %}
             {% include profile-block.html %}
         </header>        
         <main>
