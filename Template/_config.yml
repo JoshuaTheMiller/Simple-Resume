@@ -1,5 +1,15 @@
-title: Somebody's Resume
-email: example@example.com
+title: Joshua Miller's Resume
+email: resume@joshuadmiller.info
 site-description: This is the site description
 baseurl: ""
 url:
+sass:
+    style: compressed
+compress_html:    
+  clippings: all  
+  endings: all
+  ignore:
+    envs: []
+  blanklines: true
+  profile: false
+  startings: all

@@ -1,6 +1,9 @@
 <section class="experience-entry">
-    <h1><a href="{{ include.url }}" target="_blank">{{ include.title }}</a> <span class="experience-entry-link">{{ include.url }}</span></h1>    
-    <div class="content">    
+    {% if include.image %}
+    <img class="experience-entry-image" src="{{ include.image }}">
+    {% endif %} 
+    <div class="content">
+        <h1><a href="{{ include.url }}" target="_blank">{{ include.title }}</a> <span class="experience-entry-link">{{ include.url }}</span></h1>    
         <p>{{ include.subtitle }}</p>
         {% if include.notes %}
         <ul>
@@ -12,6 +15,6 @@
         {% if include.tagGroups %}        
         {% include template-tag-groups.html 
             tagGroups=include.tagGroups %}        
-        {% endif %}
+        {% endif %} 
     </div>
 </section>

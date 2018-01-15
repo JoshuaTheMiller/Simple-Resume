@@ -1,7 +1,8 @@
 <section class="experience-entry">
-    <h1><a href="{{ include.url }}" target="_blank">{{ include.title }}</a></h1>
-    <div class="content">    
-        <p>{{ include.position }}</p>
+    <a href="{{ include.url }}" target="_blank"><img class="experience-entry-image" src="{{ include.image }}"></a>
+    <div class="content">
+        <h1>{{ include.position }}</h1>            
+        <p><b><a href="{{ include.url }}" target="_blank">{{ include.title }}</a></b> | <a href="https://www.google.com/maps/place/{{ include.location }}" target="_blank">{{ include.location }}</a> | {{ include.dateRange.start }} to {{ include.dateRange.end }}</p>
         <p>{{ include.subtitle }}</p>
         {% if include.notes %}
         <ul>
@@ -13,6 +14,6 @@
         {% if include.tagGroups %}        
         {% include template-tag-groups.html 
             tagGroups=include.tagGroups %}        
-        {% endif %}
+        {% endif %}        
     </div>
 </section>

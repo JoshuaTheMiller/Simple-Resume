@@ -1,16 +1,31 @@
 {
     "employers":[
         {
-            "title":"Fake Employer",
-            "url":"http://example.com",
-            "short_description":"This place really doesn't exist.",
-            "position":"Faker",
+            "title":"Garmin",
+            "url":"http://www.garmin.com",
+            "image":"images/employers/icon_garmin.png",
+            "short_description":"While officially given the position of Process Engineering Intern, my main duties involved writing applications to solve various problems.",
+            "position":"Process Engineering Intern",
+            "location":"Olathe, KS.",
+            "dateRange":{
+                "start":"May 2015",
+                "end":"Dec 2015"
+            },
             "notes": [
                 {
-                    "content":"Did stuff."
+                    "content":"Developed a method to determine which tool set (framework, language, etc.) would be best suited for an application/tool request."
                 },
                 {
-                    "content":"Did other stuff."
+                    "content":"Developed an outline for how programming projects should be documented and controlled using Jira and Confluence."
+                },
+                {
+                    "content":"Honed project management skills by: balancing multiple ongoing tasks, analyzing the ROI of projects, and by dealing with changes in project scope."
+                },
+                {
+                    "content":"Worked independently while taking the initiative to find projects that could improve the quality of the workplace."
+                },
+                {
+                    "content":"Effectively used various means of communication to pull in project resources or general help. This was often done across departments and teams."
                 }
             ],
             "tagGroups": [
@@ -18,27 +33,58 @@
                     "name": "Technologies",
                     "tags": [
                         {
-                            "display":"The internet"
+                            "display":"WPF",
+                            "url":"https://docs.microsoft.com/en-us/visualstudio/designers/introduction-to-wpf"
                         },
                         {
-                            "display":"Google",
-                            "url":"https://www.google.com"
-                        }
-                    ]
-                },
-                {
-                    "name": "Skills",
-                    "tags": [
-                        {
-                            "display":"Using themes"                            
+                            "display":"C#",
+                            "url":"https://en.wikipedia.org/wiki/C_Sharp_(programming_language)"
                         },
                         {
-                            "display":"Agile",
-                            "url":"https://en.wikipedia.org/wiki/Agile_software_development"                            
+                            "display":"Jira"                            
+                        },
+                        {
+                            "display":"Confluence"                            
                         }
                     ]
                 }
             ]
-        }
+        },
+        {
+            "title":"MCIS",
+            "url":"https://www.marshfieldclinic.org/mcis/",
+            "image":"images/employers/icon_mcis.png",
+            "short_description":"",
+            "position":"Developer/Analyst",
+            "location":"Marshfield, WI.",
+            "dateRange":{
+                "start":"Feb 2016",
+                "end":"Present"
+            }
+        },
+        {
+            "title":"Rockwell Automation",
+            "url":"https://www.rockwellautomation.com/",
+            "image":"images/employers/icon_ra.png",
+            "short_description":"",
+            "position":"Quality Engineering Intern",
+            "location":"Ladysmith, WI.",
+            "dateRange":{
+                "start":"May 2014",
+                "end":"Aug 2014"
+            }
+        },
+        {
+            "title":"University of Wisconsin - Stout",
+            "url":"http://www.uwstout.edu/",
+            "image":"images/employers/icon_uws.png",
+            "short_description":"",
+            "position":"Supplemental Instructor",
+            "location":"Menomonie, WI.",
+            "dateRange":{
+                "start":"Sep 2013",
+                "end":"May 2014"
+            }
+        }        
     ]
 }

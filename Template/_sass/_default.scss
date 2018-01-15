@@ -1,3 +1,5 @@
+// I realize this isn't really a scss file... This is being done initially just for the easy compression.
+
 html,
 body {
     margin:0;
@@ -6,9 +8,8 @@ body {
     /* Background pattern from www.toptal.com/designers/subtlepatterns/  */
     background-image: url("../images/circles-light.png");    
     background-repeat: repeat;
-    /* Eh this is how I made the initial font choice: https://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html */
+    /* Eh this is how I made the font choice: https://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html */
     /* font-family: "Helvetica"; */
-    /* I then liked the look of this better: */
     font-family: 'Raleway', sans-serif;
 }
 
@@ -20,16 +21,15 @@ body {
         "header header header"
         ". main .";
     justify-content: center;    
-    align-items: start;
 }
 
 header {   
     grid-area: header;  
-    padding:10px;     
+    padding:10px;               
 }
 
 main {
-    grid-area: main;          
+    grid-area: main;      
     position: relative;  
     padding: 0px;   
     padding-bottom: 50px; /* Offsetting by the height of the footer otherwise the footer would cover the bottom text */            
@@ -64,18 +64,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.content {
-    margin-top: 5px;
-    margin-left: 5px;
-    padding-left: 0px; 
-}
-
-.content p, ul {
-    margin-top: 1px;
-    margin-bottom: 1px;
-    margin-right: 1px;
-}
-
 /* Profile Header Block
 -------------------------------------------------------------- */
 
@@ -107,7 +95,7 @@ a:hover {
     grid-area: profile-description;
     align-self: center;
     justify-self: left; 
-    text-align: center;    
+    text-align: center;
 }
 
 .profile-image {
@@ -137,13 +125,13 @@ a:hover {
 }
 
 .experience-entry {
-    padding-left: 10px;
-    margin-left: 5px;    
+    padding-left: 0px;
+    margin-left: 0px;    
     margin-top: 15px;
 }
 
 .experience-entry h1 {
-    margin-top: 5px;
+    margin-top: -3px;
     margin-bottom: 5px;
     border-style: none;    
 }
@@ -151,6 +139,21 @@ a:hover {
 .experience-entry-link {
     display: none;
     visibility: hidden;
+}
+
+.experience-entry-image {
+    display: none;
+}
+
+.content {
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px; 
+}
+
+.content p, ul {
+    margin-top: 1px;
+    margin-bottom: 1px;    
 }
 
 /* -------------------------------------------------------------- */
@@ -163,10 +166,9 @@ a:hover {
     text-decoration: none;
     display: inline-block;    
     position: fixed;   
-    border-radius: 50%;
-    left: 100% - 20px;
+    border-radius: 50%;    
     margin: 5px;
-    right: 0;    
+    right: 5px;    
     bottom: 0;
     border-style: solid;
     border-width: 1px;
@@ -225,6 +227,10 @@ a:hover {
         margin-left: 5px;
     }
 
+    .experience-entry h1 {
+        margin-top: 5px;             
+    }
+
     .experience-entry-link {
         display: block;
         visibility: visible;
@@ -235,21 +241,13 @@ a:hover {
     }
 }
 
-@media print, screen and (min-width: 948px) {        
+@media print, screen and (min-width: 950px) {        
     .profile-description-container {
         text-align: left;    
     }
 }
 
-@media only screen and (min-width: 948px) {        
-    body {        
-        grid-template-columns: 1fr 1fr repeat(8, 1fr) 1fr 1fr;
-        grid-template-rows: auto auto;     
-        grid-template-areas:        
-            ". . header header header header header header header header . ."
-            ". . . main main main main main main . . .";        
-    }
-
+@media screen and (min-width: 600px) {
     .profile-block {        
         grid-template-columns: 1fr 4fr;
         grid-template-rows: auto auto;
@@ -257,4 +255,35 @@ a:hover {
             "profile-image profile-description"
             "profile-links profile-description";  
     }
+
+    .experience-entry {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "experience-image experience-content";        
+        justify-content: left;
+    }
+
+    .experience-entry-image {
+        display: initial;
+        grid-area: "experience-image";
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .content {
+        grid-area: "experience-content";
+    }
+}
+
+@media only screen and (min-width: 950px) {    
+    body {        
+        grid-template-columns: 1fr 1fr repeat(8, 1fr) 1fr 1fr;
+        grid-template-rows: auto auto;     
+        grid-template-areas:        
+            ". . header header header header header header header header . ."
+            ". . . main main main main main main . . .";        
+    }    
 }

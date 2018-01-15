@@ -1,13 +1,18 @@
 {
-    "firstName":"ImNot",
-    "lastName": "ARealPerson",
+    "firstName":"Joshua",
+    "lastName": "Miller",
     "profileImagePath":"images/profile.png",
-    "description":"I am currently not real and this is just placeholder text.",
+    "description":"I am currently a Software Developer at Marshfield Clinic Health System in Marshfield, WI. I come from a .NET and WPF desktop development background, but have been prototyping with some modern web technologies. My current favorite languages/frameworks/tools are C#, Typescript, Angular (2+), NodeJS, .NET Core, Docker, and AWS.",
     "personalLinks": [
         {
-            "displayText":"example@example.com",
-            "url":"mailto:example@example.com?Subject=I%20noticed%20your%20resume%20site...",
+            "displayText":"resume@joshuadmiller.info",
+            "url":"mailto:resume@joshuadmiller.info?Subject=I%20noticed%20your%20resume%20site...",
             "targetType":"_top"
+        },
+        {
+            "displayText":"github.com/TheFlyingCaveman",
+            "url":"https://github.com/TheFlyingCaveman",
+            "targetType":"_blank"
         }
     ],
     "iconLinks": [
