@@ -3,9 +3,9 @@
     <div class="content">
         <h1>{{ include.position }}</h1>            
         <p><b><a href="{{ include.url }}" target="_blank">{{ include.title }}</a></b> | <a href="https://www.google.com/maps/place/{{ include.location }}" target="_blank">{{ include.location }}</a> | {{ include.dateRange.start }} to {{ include.dateRange.end }}</p>
-        <p>{{ include.subtitle }}</p>
-        {% if include.notes %}
-        <ul>
+        <p class="short-description" >{{ include.subtitle }}</p>
+        {% if include.notes %}        
+        <ul class="note-block">
         {% for note in include.notes %}
             <li>{{ note.content }}</li>
         {% endfor %}
