@@ -44,7 +44,7 @@ footer {
     bottom: 0;
     height: 50px;
     background: white;
-    opacity: .6;
+    opacity: 1;
     font-size: 12px;    
 }
 
@@ -104,6 +104,10 @@ a:hover {
     text-align: center;
 }
 
+.profile-description-links-container {
+    margin-top: 5px;
+}
+
 .profile-image {
     border-radius: 15% 15% 15% 15%;  
     height: 200px;
@@ -116,6 +120,14 @@ a:hover {
 
 .profile-block p {
     margin: 4px 0px;
+}
+
+.puffy-image {
+    transition: transform .25s ease-out;    
+}
+
+.puffy-image:hover {
+    transform: scale(1.15);
 }
 
 /* -------------------------------------------------------------- */
