@@ -105,7 +105,7 @@ ul {
     grid-area: profile-links;     
     justify-self: center;
     display: inline-block;     
-    text-align: center;  
+    text-align: center;      
 }
 
 .profile-description-container {
@@ -145,8 +145,13 @@ ul {
 
 /* Experience Block
 -------------------------------------------------------------- */
+.experience-block {
+    margin-bottom: 10px;
+}
+
 .experience-block h1 {
     color: black;    
+    margin-top: 0px;
     margin-bottom: 5px;
     border-bottom-style: solid;
     border-width: 2px;
@@ -259,6 +264,10 @@ ul {
         font-size: 12px;
     }
 
+    .experience-block {
+        margin-bottom: 5px;
+    }
+
     .experience-entry {        
         padding-left: 10px;
         margin-left: 5px;
@@ -278,7 +287,7 @@ ul {
     }
 }
 
-@media print, screen and (min-width: 950px) {        
+@media print, screen and (min-width: 600px) {        
     .profile-description-container {
         text-align: left;    
     }
@@ -291,6 +300,10 @@ ul {
         grid-template-areas: 
             "profile-image profile-description"
             "profile-links profile-description";  
+    }
+
+    .profile-links-container {
+        width: 200px;
     }
 
     .experience-entry {
