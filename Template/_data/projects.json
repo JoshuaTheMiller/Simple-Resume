@@ -1,106 +1,9 @@
 {
     "projects":[
         {
-            "title":"Guid.RED",
-            "short_description":"A very simple site that generates and copies GUIDs when the screen is clicked.",
-            "url":"http://guid.red",
-            "tagGroups": [
-                {
-                    "name": "Technologies",
-                    "tags": [
-                        {
-                            "display":"Razor Pages",
-                            "url":"https://docs.microsoft.com/en-us/aspnet/core/mvc/razor-pages/?tabs=visual-studio"
-                        },
-                        {
-                            "display":"ASP.Net Core",
-                            "url":"https://docs.microsoft.com/en-us/aspnet/core/"
-                        },
-                        {
-                            "display":"Amazon Lightsail",
-                            "url":"https://aws.amazon.com/lightsail/"
-                        },
-                        {
-                            "display":"Docker",
-                            "url":"https://www.docker.com/"
-                        },
-                        {
-                            "display":"Let's Encrypt",
-                            "url": "https://letsencrypt.org/"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title":"Rapid Prototyping",
-            "short_description":"",
-            "url":"https://www.thingiverse.com/TheFlyingCaveman/",
-            "notes": [
-                {
-                    "content":"Designed and created \"upgrades\" for my printer as issues were identified."
-                },
-                {
-                    "content":"Created a replacement <a href=\"https://www.thingiverse.com/thing:2744252\" target=\"_blank\">flute stand</a> for my sister."
-                }
-            ],
-            "tagGroups": [
-                {
-                    "name": "Technologies",
-                    "tags": [
-                        {
-                            "display":"OnShape",
-                            "url":"https://www.onshape.com/"
-                        },
-                        {
-                            "display":"Cura",
-                            "url":"https://ultimaker.com/en/products/ultimaker-cura-software"
-                        },
-                        {
-                            "display":"Printer: Anet A8",
-                            "url":"https://www.google.com/search?q=anet+a8"
-                        },
-                        {
-                            "display":"SOLIDWORKS",
-                            "url":"http://www.solidworks.com/"
-                        },
-                        {
-                            "display":"SketchUp",
-                            "url":"https://www.sketchup.com/"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title":"Steam Player Count",
-            "short_description":"An Alexa Skill that gives you the global player count of recognized games.",
-            "url":"https://bit.ly/SteamPlayerCount",
-            "tagGroups": [
-                {
-                    "name": "Technologies",
-                    "tags": [
-                        {
-                            "display":"AWS Lambda",
-                            "url":"https://aws.amazon.com/lambda/"
-                        },
-                        {
-                            "display":"NodeJS",
-                            "url":"https://nodejs.org/"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title":"Garmin Watchfaces",
-            "short_description":"I make watchefaces (sometimes by request) for Garmin wearable devices.",
-            "url":"https://bit.ly/JoshuasGarminDevPage"
-        },
-        {
             "title":"Simple-Resume",
             "short_description":"The Jekyll theme that this site is using.",
-            "url":"https://github.com/TheFlyingCaveman/Simple-Resume",
+            "url":"https://github.com/JoshuaTheMiller/Simple-Resume",
             "notes": [
                 {
                     "content":"Planned improvements: utilize well known CSS framework."
@@ -111,12 +14,11 @@
                     "name": "Technologies",
                     "tags": [
                         {
-                            "display":"Travis-CI",
-                            "url":"https://travis-ci.org/"
-                        },
-                        {
                             "display":"Jekyll",
                             "url":"https://jekyllrb.com/"
+                        },
+                        {
+                            "display":"Ruby"
                         }
                     ]
                 }
