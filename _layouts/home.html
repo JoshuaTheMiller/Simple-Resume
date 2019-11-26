@@ -4,29 +4,33 @@ layout: default
 
 <section class="experience-block">
     <h1>Recent Projects</h1>
-    {% assign sortedProjects = site.data.projects.projects | sort:"title" %}
-    {% for project in sortedProjects %}
-        {% include template-project.html 
-            title=project.title
-            subtitle=project.short_description 
-            notes=project.notes
-            tagGroups=project.tagGroups
-            url=project.url %}
-    {% endfor %}    
+    {% if site.data.projects %}
+        {% assign sortedProjects = site.data.projects.projects | sort:"title" %}
+        {% for project in sortedProjects %}
+            {% include template-project.html 
+                title=project.title
+                subtitle=project.short_description 
+                notes=project.notes
+                tagGroups=project.tagGroups
+                url=project.url %}
+        {% endfor %}
+    {% endif %}    
 </section>
 <section class="experience-block">
-    <h1>Employment History</h1>    
-    {% assign sortedEmployers = site.data.employment.employers | sort:"dateRange.end" | reverse %}
-    {% for employer in sortedEmployers %}
-        {% include template-employer.html 
-            title=employer.title 
-            position=employer.position
-            location=employer.location
-            dateRange=employer.dateRange
-            subtitle=employer.short_description             
-            notes=employer.notes 
-            url=employer.url 
-            image=employer.image
-            tagGroups=employer.tagGroups %}
-    {% endfor %}
+    <h1>Employment History</h1>   
+    {% if site.data.employment %} 
+        {% assign sortedEmployers = site.data.employment.employers | sort:"dateRange.end" | reverse %}
+        {% for employer in sortedEmployers %}
+            {% include template-employer.html 
+                title=employer.title 
+                position=employer.position
+                location=employer.location
+                dateRange=employer.dateRange
+                subtitle=employer.short_description             
+                notes=employer.notes 
+                url=employer.url 
+                image=employer.image
+                tagGroups=employer.tagGroups %}
+        {% endfor %}
+    {% endif %} 
 </section>
