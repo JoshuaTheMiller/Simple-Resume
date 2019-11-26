@@ -1,13 +1,16 @@
-title: Joshua Miller's Resume
+title: A Resume
 email: resume@joshuadmiller.info
 site-description: This is the site description
 in-development: true
 baseurl: ""
 url:
+
 sass:
     style: compressed
-compress_html:    
-  clippings: all  
+  
+compress_html:
+  clippings: all
+  comments: all
   endings: all
   ignore:
     envs: []
