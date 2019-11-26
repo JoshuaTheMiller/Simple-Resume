@@ -18,9 +18,25 @@ Step 2: Install your flavor of Linux, I chose Ubuntu
 
 Step 3: Install the tools (I may rewrite this to use `Snap` instead of `apt`)
 
+* From the horses mouth: https://jekyllrb.com/docs/installation/ubuntu/
+
+First, run
+
 ```bash
-sudo apt update && \
-sudo apt-get install ruby-full && \
-sudo apt-get ruby-dev && \
-gem install jekyll
+sudo apt-get install ruby-full build-essential zlib1g-dev git
+```
+
+Then,
+
+```bash
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+Then,
+
+```bash
+gem install jekyll bundler github-pages
 ```
