@@ -1,0 +1,28 @@
+{
+    "projects":[
+        {
+            "title":"Simple-Resume",
+            "short_description":"The Jekyll theme that this site is using.",
+            "url":"https://github.com/JoshuaTheMiller/Simple-Resume",
+            "notes": [
+                {
+                    "content":"Planned improvements: utilize well known CSS framework."
+                }
+            ],
+            "tagGroups": [
+                {
+                    "name": "Technologies",
+                    "tags": [
+                        {
+                            "display":"Jekyll",
+                            "url":"https://jekyllrb.com/"
+                        },
+                        {
+                            "display":"Ruby"
+                        }
+                    ]
+                }
+            ]      
+        }
+    ]
+}

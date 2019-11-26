@@ -2,7 +2,7 @@
     "firstName":"Joshua",
     "lastName": "Miller",
     "profileImagePath":"images/profile.png",
-    "description":"I am currently a Software Developer at Marshfield Clinic Health System in Marshfield, WI. I come from a .NET and WPF desktop development background, but have been prototyping with some modern web technologies. My current favorite languages/frameworks/tools are C#, Typescript, Angular (2+), NodeJS, .NET Core, Docker, and AWS.",
+    "description":"Just an engineer that likes making things",
     "personalLinks": [
         {
             "displayText":"resume@joshuadmiller.info",
@@ -10,8 +10,8 @@
             "targetType":"_top"
         },
         {
-            "displayText":"github.com/TheFlyingCaveman",
-            "url":"https://github.com/TheFlyingCaveman",
+            "displayText":"github.com/JoshuaTheMiller",
+            "url":"https://github.com/JoshuaTheMiller",
             "targetType":"_blank"
         }
     ],
@@ -19,7 +19,7 @@
         {
             "displayText":"Medium",
             "displayImagePath":"images/icon_medium.png",
-            "url":"https://medium.com/@aflyingcaveman"
+            "url":"https://medium.com/@JoshuaTheMiller"
         },
         {
             "displayText":"LinkedIn",
@@ -29,7 +29,7 @@
         {
             "displayText":"GitHub",
             "displayImagePath":"images/icon_github.svg",
-            "url":"https://github.com/TheFlyingCaveman"
+            "url":"https://github.com/JoshuaTheMiller"
         },
         {
             "displayText":"Thingiverse",
