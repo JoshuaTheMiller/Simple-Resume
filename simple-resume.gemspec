@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/JoshuaTheMiller/Simple-Resume"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|_data|images|css|LICENSE|README)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|_data|images|css|index.md|favicon.ico|LICENSE|README)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.0"
 
