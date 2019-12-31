@@ -4,6 +4,7 @@
 .sass-cache
 _site
 Gemfile.lock
+.jekyll-metadata
 
 .vscode/*
 !.vscode/settings.json

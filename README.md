@@ -40,3 +40,13 @@ Then,
 ```bash
 gem install jekyll bundler github-pages
 ```
+
+### To Run
+
+As there are some issues running Jekyll on Windows (at the time of writing), I use the following command:
+
+`bundle exec jekyll _3.8.6_ serve --no-watch --trace --incremental`
+
+Additionally, I have found that periodically cleaning helps...
+
+`bundle exec jekyll clean`
