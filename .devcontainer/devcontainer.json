@@ -1,0 +1,9 @@
+{
+    "name": "Jekyll Builder",
+    "dockerFile": "Dockerfile",
+    "extensions": [],
+    "forwardPorts": [
+        4000
+    ],
+    "postCreateCommand": "bundle install"    
+}
