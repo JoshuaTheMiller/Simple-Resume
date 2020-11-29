@@ -1,2 +1,3 @@
-* eol = clrf
+* text=auto
+* eol=clrf
 *.png		-text
