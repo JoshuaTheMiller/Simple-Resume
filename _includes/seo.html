@@ -8,3 +8,24 @@
 {%- if seo_description %}
 <meta name="description" content="{{ seo_description | strip_html | normalize_whitespace | escape }}">
 {%- endif %}
+{%- assign seo_title = page.seo_title | default: site.title %}
+{%- assign seo_person = site.data.personalInfo %}
+{%- if site.url and site.url != "" %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{%- endif %}
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ seo_title | escape }}">
+{%- if seo_description %}
+<meta property="og:description" content="{{ seo_description | strip_html | normalize_whitespace | escape }}">
+{%- endif %}
+{%- if seo_person.firstName %}
+<meta property="profile:first_name" content="{{ seo_person.firstName | escape }}">
+{%- endif %}
+{%- if seo_person.lastName %}
+<meta property="profile:last_name" content="{{ seo_person.lastName | escape }}">
+{%- endif %}
+{%- if seo_person.profileImagePath and site.url and site.url != "" %}
+<meta property="og:image" content="{{ seo_person.profileImagePath | absolute_url }}">
+{%- endif %}
+<meta name="twitter:card" content="summary">
