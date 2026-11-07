@@ -14,6 +14,7 @@ All notable changes to this theme are recorded here. The format follows
 - The footer credit links to joshuamiller.net.
 - Raleway is self-hosted (variable font, Latin and Latin Extended) instead of loaded from Google Fonts. Headings now use Raleway's real bold, so they look heavier than the synthesized bold before. Text shows in a fallback font until Raleway loads.
 - Links inside bullet points are underlined, so they don't rely on color alone.
+- Print: entries no longer split across pages, section headings aren't stranded at a page's foot, the background pattern and under-construction banner don't print, and pages get a half-inch margin.
 - `compress.html` is updated to 3.2.0, so a page can opt out with `compress_html: false`.
 
 ### Added
@@ -26,6 +27,7 @@ All notable changes to this theme are recorded here. The format follows
 - A visible outline on links and buttons focused from the keyboard.
 - Open Graph and Twitter card tags, so shared links unfurl with the title, description and photo. The canonical link and image URLs need `site.url`, which GitHub Pages sets.
 - schema.org `Person` JSON-LD built from `personalInfo.json` and the current role in `employment.json`.
+- In print, a line listing the icon links' names and addresses (LinkedIn and so on), which were hidden on paper.
 - `description` in `_config.yml` (or a page's front matter) as the standard way to set the description. `site-description` still works and takes precedence over `description`.
 
 ### Fixed
