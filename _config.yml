@@ -5,10 +5,6 @@ in-development: true
 baseurl: ""
 url:
 
-# Lets jekyll-github-metadata (part of the GitHub Pages gems) work outside Pages,
-# for example in a build with no git remote.
-repository: JoshuaTheMiller/Simple-Resume
-
 sass:
     style: compressed
   

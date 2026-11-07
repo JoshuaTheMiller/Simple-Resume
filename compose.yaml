@@ -2,7 +2,7 @@
 # Edits to layouts, includes, styles and data rebuild automatically and reload the page.
 services:
   jekyll:
-    image: ruby:3.3
+    image: ruby:3.4
     working_dir: /srv/site
     command: >
       sh -c "bundle install --quiet &&
