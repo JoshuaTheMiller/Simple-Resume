@@ -1,16 +1,13 @@
-title: A Resume
-email: resume@joshuadmiller.info
-description: This is the site description
-in-development: true
-baseurl: ""
-url:
+# Theme defaults. Jekyll 4 merges a gem theme's _config.yml beneath the site's own,
+# so a site can override any of these. Settings for this repo's demo site are in
+# _config.demo.yml, which only the dev preview and CI load.
 
 plugins:
   - jekyll-seo-tag
 
 sass:
-    style: compressed
-  
+  style: compressed
+
 compress_html:
   clippings: all
   comments: all
@@ -20,14 +17,3 @@ compress_html:
   blanklines: true
   profile: false
   startings: all
-
-# Repository files that are not part of the demo site.
-exclude:
-  - README.md
-  - CHANGELOG.md
-  - LICENSE
-  - compose.yaml
-  - simple-resume.gemspec
-  - Gemfile
-  - Gemfile.lock
-  - vendor

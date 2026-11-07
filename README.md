@@ -83,7 +83,7 @@ Then open <http://localhost:4000>. Changes to layouts, includes, styles and data
 and reload the page.
 
 A dev container is also included (`.devcontainer/`) for VS Code or Codespaces. Inside it, run
-`bundle exec jekyll serve --livereload --force_polling`.
+`bundle exec jekyll serve --config _config.yml,_config.demo.yml --livereload --force_polling`.
 
 Every pull request is built with the same gems GitHub Pages uses, and the generated HTML is checked
 with [html-proofer](https://github.com/gjtorikian/html-proofer).

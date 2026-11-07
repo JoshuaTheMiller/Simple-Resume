@@ -1,0 +1,20 @@
+# The demo site in this repo (sample data in _data). Loaded after _config.yml:
+#   bundle exec jekyll serve --config _config.yml,_config.demo.yml
+
+title: A Resume
+email: resume@joshuadmiller.info
+description: This is the site description
+in-development: true
+baseurl: ""
+url:
+
+# Repository files that are not part of the demo site.
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - compose.yaml
+  - simple-resume.gemspec
+  - Gemfile
+  - Gemfile.lock
+  - vendor

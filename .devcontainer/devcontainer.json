@@ -3,5 +3,5 @@
     "image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
     "forwardPorts": [4000, 35729],
     "postCreateCommand": "bundle install",
-    "postAttachCommand": "echo 'Preview: bundle exec jekyll serve --livereload --force_polling'"
+    "postAttachCommand": "echo 'Preview: bundle exec jekyll serve --config _config.yml,_config.demo.yml --livereload --force_polling'"
 }

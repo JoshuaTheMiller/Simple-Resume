@@ -20,7 +20,7 @@ jobs:
           bundler-cache: true
 
       - name: Build the demo site
-        run: bundle exec jekyll build --strict_front_matter
+        run: bundle exec jekyll build --strict_front_matter --config _config.yml,_config.demo.yml
         env:
           JEKYLL_ENV: production
 
