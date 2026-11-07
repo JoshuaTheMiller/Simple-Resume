@@ -1,52 +1,90 @@
-# Simple-Resume, a Jekyll Theme
+# Simple-Resume
 
-A first take at making a Jekyll theme.
+A single-page resume theme for [Jekyll](https://jekyllrb.com/). Everything on the page comes from
+three data files, so updating your resume means editing JSON, not HTML. There is a print button
+(and a print stylesheet) for when you need it on paper or as a PDF.
 
-# To develop this theme
+See it in use at [joshuamiller.net](https://joshuamiller.net).
 
-## Windows 10
+## Use it
 
-There are many ways to get your development environment up to snuff... I use a combination of PowerShell, and the Linux Subsystem:
+The theme runs on the classic GitHub Pages build (Jekyll 3.x). In your site's `_config.yml`:
 
-Step 1: Enable WSL
+```yaml
+plugins:
+  - jekyll-remote-theme
 
-```PowerShell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+# Pin a release so theme changes reach your site only when you choose.
+remote_theme: JoshuaTheMiller/Simple-Resume@v1.0.0
 ```
 
-Step 2: Install your flavor of Linux, I chose Ubuntu
+Add an `index.md` that uses the theme's layout:
 
-Step 3: Install the tools (I may rewrite this to use `Snap` instead of `apt`)
-
-* From the horses mouth: https://jekyllrb.com/docs/installation/ubuntu/
-
-First, run
-
-```bash
-sudo apt-get install ruby-full build-essential zlib1g-dev git
+```markdown
+---
+layout: index
+title: Resume
+---
 ```
 
-Then,
+Then add the data files below. Images referenced from the data live in your own repo.
 
-```bash
-echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+### Site settings (`_config.yml`)
+
+| Key | What it does |
+|---|---|
+| `title` | The page title. |
+| `site-description` | The page's meta description. |
+| `in-development` | `true` shows an "under construction" banner. |
+
+### `_data/personalInfo.json`
+
+| Field | What it does |
+|---|---|
+| `firstName`, `lastName` | Your name, the page heading. |
+| `profileImagePath` | Your photo. |
+| `description` | A short summary under your name. |
+| `personalLinks[]` | Text links under the summary: `displayText`, `url`, `targetType` (`_blank` or `_top`). |
+| `iconLinks[]` | Icon links under the photo: `displayText`, `displayImagePath`, `url`. |
+
+### `_data/projects.json`
+
+`projects[]`, sorted by title. Each has `title`, `url`, `short_description`, optional `image`,
+optional `notes[]` (each `{ "content": "…" }`, HTML allowed) and optional `tagGroups[]`.
+
+### `_data/employment.json`
+
+`employers[]`, newest first. Each has `title` (the employer), `position`, `url`, `image`,
+`location`, `short_description`, `dateRange` with `start` and `end` (`YYYY-MM-DD`, or `"Present"`
+for a current role), and optional `notes[]` and `tagGroups[]`.
+
+### Tag groups
+
+Used by projects and employers: `tagGroups[]`, each with a `name` (shown as a label, such as
+"Technologies") and `tags[]`, each with `display` and an optional `url`.
+
+## Develop it
+
+This repo is both the theme and a demo site with sample data. To preview it with live reload,
+with Docker running:
+
+```sh
+docker compose up
 ```
 
-Then,
+Then open <http://localhost:4000>. Changes to layouts, includes, styles and data rebuild the site
+and reload the page.
 
-```bash
-gem install jekyll bundler github-pages
-```
+A dev container is also included (`.devcontainer/`) for VS Code or Codespaces. Inside it, run
+`bundle exec jekyll serve --livereload --force_polling`.
 
-### To Run
+Every pull request is built with the same gems GitHub Pages uses, and the generated HTML is checked
+with [html-proofer](https://github.com/gjtorikian/html-proofer).
 
-As there are some issues running Jekyll on Windows (at the time of writing), I use the following command:
+## Changes
 
-`bundle exec jekyll _3.8.6_ serve --no-watch --trace --incremental`
+See [CHANGELOG.md](CHANGELOG.md).
 
-Additionally, I have found that periodically cleaning helps...
+## License
 
-`bundle exec jekyll clean`
+[MIT](LICENSE)
