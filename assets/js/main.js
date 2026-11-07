@@ -8,8 +8,16 @@ function updateDate() {
     }
 }
 
+function wirePrintButton() {
+    const button = document.querySelector(".print-button");
+    if (button) {
+        button.addEventListener("click", function () { window.print(); });
+    }
+}
+
 function onLoad() {
     updateDate();
+    wirePrintButton();
     console.log("If you like Simple-Resume, consider supporting it! (https://joshuamiller.net)")
 }
 
