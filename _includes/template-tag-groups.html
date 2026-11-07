@@ -3,7 +3,7 @@
         {{ group.name }}:
         {% for tag in group.tags %}
             {% if tag.url %}
-            <a href="{{ tag.url }}" target="_blank">{{ tag.display }}</a>
+            <a href="{{ tag.url }}" target="_blank" rel="noopener">{{ tag.display }}</a>
             {% else %}
             <span>{{ tag.display }}</span>
             {% endif %}            
