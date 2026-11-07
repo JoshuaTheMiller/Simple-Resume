@@ -18,12 +18,12 @@
     "iconLinks": [
         {
             "displayText":"Medium",
-            "displayImagePath":"images/icon_medium.png",
+            "displayImagePath":"images/icon_medium.svg",
             "url":"https://medium.com/@JoshuaTheMiller"
         },
         {
             "displayText":"LinkedIn",
-            "displayImagePath":"images/icon_linkedin.png",
+            "displayImagePath":"images/icon_linkedin.svg",
             "url":"https://www.linkedin.com/in/joshuadmiller/"
         },
         {
