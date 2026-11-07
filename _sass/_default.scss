@@ -315,6 +315,17 @@ ul {
     .profile-print-links span + span::before {
         content: " · ";
     }
+
+    /* Keep each entry on one page, and never leave a section heading at the bottom of one. */
+    .experience-entry {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .experience-block > h1 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
 }
 
 @media print, screen and (min-width: 600px) {        
