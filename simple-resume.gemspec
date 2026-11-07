@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "simple-resume"
-  spec.version       = "0.1.0"
+  spec.version       = "1.0.0"
   spec.authors       = ["Joshua Miller"]
 
   spec.summary       = "A simple Jekyll theme to show off some technology and experience."
