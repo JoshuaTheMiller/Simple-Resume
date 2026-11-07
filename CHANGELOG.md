@@ -27,6 +27,7 @@ All notable changes to this theme are recorded here. The format follows
 - A visible outline on links and buttons focused from the keyboard.
 - Open Graph and Twitter card tags, so shared links unfurl with the title, description and photo. The canonical link and image URLs need `site.url`, which GitHub Pages sets.
 - schema.org `Person` JSON-LD built from `personalInfo.json` and the current role in `employment.json`.
+- Dark mode, opt-in: `dark-mode: auto` in `_config.yml` follows the reader's system setting. Off unless set.
 - In print, a line listing the icon links' names and addresses (LinkedIn and so on), which were hidden on paper.
 - `description` in `_config.yml` (or a page's front matter) as the standard way to set the description. `site-description` still works and takes precedence over `description`.
 
