@@ -1,6 +1,8 @@
+{%- assign profileName = site.data.personalInfo.firstName | append: " " | append: site.data.personalInfo.lastName | strip -%}
+{%- assign profileAlt = site.data.personalInfo.profileImageAlt | default: profileName -%}
 <div class="profile-block">    
         <div class="profile-image-container">
-            <img class="profile-image" src="{{ site.data.personalInfo.profileImagePath | relative_url }}">    
+            <img class="profile-image" alt="{{ profileAlt | escape }}" src="{{ site.data.personalInfo.profileImagePath | relative_url }}">    
         </div>    
         {% if site.data.personalInfo.iconLinks %}
         <div class="profile-links-container">

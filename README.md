@@ -45,19 +45,21 @@ Then add the data files below. Images referenced from the data live in your own 
 | Field | What it does |
 |---|---|
 | `firstName`, `lastName` | Your name, the page heading. |
-| `profileImagePath` | Your photo. |
+| `profileImagePath` | Your photo. `profileImageAlt` sets its alt text (default: your name). |
 | `description` | A short summary under your name. |
 | `personalLinks[]` | Text links under the summary: `displayText`, `url`, `targetType` (`_blank` or `_top`). |
 | `iconLinks[]` | Icon links under the photo: `displayText`, `displayImagePath`, `url`. |
 
 ### `_data/projects.json`
 
-`projects[]`, sorted by title. Each has `title`, `url`, `short_description`, optional `image`,
+`projects[]`, sorted by title. Each has `title`, `url`, `short_description`, optional `image`
+(and `imageAlt`, default: the title),
 optional `notes[]` (each `{ "content": "…" }`, HTML allowed) and optional `tagGroups[]`.
 
 ### `_data/employment.json`
 
-`employers[]`, newest first. Each has `title` (the employer), `position`, `url`, `image`,
+`employers[]`, newest first. Each has `title` (the employer), `position`, `url`, `image` (with optional
+`imageAlt`, default: the employer's name),
 `location`, `short_description`, `dateRange` with `start` and `end` (`YYYY-MM-DD`, or `"Present"`
 for a current role), and optional `notes[]` and `tagGroups[]`.
 
