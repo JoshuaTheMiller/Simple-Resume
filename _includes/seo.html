@@ -29,3 +29,37 @@
 <meta property="og:image" content="{{ seo_person.profileImagePath | absolute_url }}">
 {%- endif %}
 <meta name="twitter:card" content="summary">
+{%- comment %} schema.org Person, so search engines read the page as someone's resume. {% endcomment %}
+{%- assign seo_current = nil %}
+{%- for employer in site.data.employment.employers %}
+  {%- if employer.dateRange.end == nil or employer.dateRange.end == "" or employer.dateRange.end == "Present" %}
+    {%- if seo_current == nil or employer.dateRange.start > seo_current.dateRange.start %}{% assign seo_current = employer %}{% endif %}
+  {%- endif %}
+{%- endfor %}
+{%- assign seo_same_as = "" | split: "" %}
+{%- for link in seo_person.iconLinks %}{% assign seo_same_as = seo_same_as | push: link.url %}{% endfor %}
+{%- for link in seo_person.personalLinks %}{% if link.url contains "://" %}{% assign seo_same_as = seo_same_as | push: link.url %}{% endif %}{% endfor %}
+{%- assign seo_same_as = seo_same_as | uniq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ seo_person.firstName | append: " " | append: seo_person.lastName | strip | jsonify }}
+  {%- if seo_person.description %},
+  "description": {{ seo_person.description | strip_html | normalize_whitespace | jsonify }}
+  {%- endif %}
+  {%- if site.url and site.url != "" %},
+  "url": {{ "/" | absolute_url | jsonify }}
+  {%- if seo_person.profileImagePath %},
+  "image": {{ seo_person.profileImagePath | absolute_url | jsonify }}
+  {%- endif %}
+  {%- endif %}
+  {%- if seo_current %},
+  "jobTitle": {{ seo_current.position | jsonify }},
+  "worksFor": { "@type": "Organization", "name": {{ seo_current.title | jsonify }}{% if seo_current.url %}, "url": {{ seo_current.url | jsonify }}{% endif %} }
+  {%- endif %}
+  {%- if seo_same_as.size > 0 %},
+  "sameAs": {{ seo_same_as | jsonify }}
+  {%- endif %}
+}
+</script>
