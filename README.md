@@ -36,7 +36,7 @@ Then add the data files below. Images referenced from the data live in your own 
 | `title` | The page title. |
 | `description` | The page's meta and social-preview description. |
 | `image` | The social-preview image, e.g. `/images/profile.png`. Set it in `index.md`'s front matter or `_config.yml`. |
-| `dark-mode` | `auto` follows the reader's system light or dark setting. Leave it out to always show the light theme. |
+| `dark-mode` | The page follows the reader's system light or dark setting. Set `off` to always show the light theme. |
 | `favicon` | Path to the site icon, `/favicon.ico` by default. |
 | `lang` | The page language, `en` by default. |
 | `url` | Your site's address, e.g. `https://example.com`. It makes the canonical link and preview image absolute. |

@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}"{% if site.dark-mode == "auto" %} class="sr-dark-auto"{% endif %}>        
+<html lang="{{ site.lang | default: 'en' }}"{% if site.dark-mode != false and site.dark-mode != "off" %} class="sr-dark-auto"{% endif %}>        
     <head>
         {% include head.html %}
     </head>    
