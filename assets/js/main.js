@@ -1,10 +1,9 @@
+// The footer year is written at build time; this keeps it current if the site
+// has not been rebuilt since the year turned over.
 function updateDate() {
     const dateElement = document.getElementById("date");
-    const currentYear = new Date().getFullYear();
-    if (dateElement.textContent !== currentYear) {
-        // There is most likely a far better way to do this.
-        // Then again, this page contains almost no JS... so this may be fine 🤔
-        // I also want this to stay constantly up to date...
+    const currentYear = String(new Date().getFullYear());
+    if (dateElement && dateElement.textContent !== currentYear) {
         dateElement.textContent = currentYear;
     }
 }
