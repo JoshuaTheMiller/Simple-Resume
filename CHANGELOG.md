@@ -6,6 +6,10 @@ All notable changes to this theme are recorded here. The format follows
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-11-06
+
+See "Upgrading from v1" in the README.
+
 ### Changed
 
 - **Breaking:** requires Jekyll 4.3 or later. The classic GitHub Pages build runs Jekyll 3, so sites must build with GitHub Actions (see the README).
@@ -65,6 +69,7 @@ All notable changes to this theme are recorded here. The format follows
 
 The theme as it stood before this changelog began.
 
-[Unreleased]: https://github.com/JoshuaTheMiller/Simple-Resume/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/JoshuaTheMiller/Simple-Resume/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/JoshuaTheMiller/Simple-Resume/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/JoshuaTheMiller/Simple-Resume/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/JoshuaTheMiller/Simple-Resume/releases/tag/v0.1.0
