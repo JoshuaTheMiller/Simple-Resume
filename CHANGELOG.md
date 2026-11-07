@@ -24,9 +24,13 @@ All notable changes to this theme are recorded here. The format follows
 - `<html lang>`, from `site.lang` (default `en`).
 - An employer with no `end` date is treated as a current role, like `"Present"`.
 - A visible outline on links and buttons focused from the keyboard.
+- Open Graph and Twitter card tags, so shared links unfurl with the title, description and photo. The canonical link and image URLs need `site.url`, which GitHub Pages sets.
+- schema.org `Person` JSON-LD built from `personalInfo.json` and the current role in `employment.json`.
+- `description` in `_config.yml` (or a page's front matter) as the standard way to set the description. `site-description` still works and takes precedence over `description`.
 
 ### Fixed
 
+- The meta description was always empty (`{{ site-description }}` is not a variable).
 - A site with no `personalLinks` got a stray `</p></div>` that closed the description early.
 - Current roles sorted first only because `"Present"` sorts after digits; they are now placed first on purpose.
 - Links that open a new tab carry `rel="noopener"`.
