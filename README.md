@@ -34,7 +34,9 @@ Then add the data files below. Images referenced from the data live in your own 
 | Key | What it does |
 |---|---|
 | `title` | The page title. |
-| `site-description` | The page's meta description. |
+| `site-description` or `description` | The page's meta and social-preview description. `site-description` wins if both are set. |
+| `lang` | The page language, `en` by default. |
+| `url` | Your site's address. GitHub Pages sets it for you; it makes the canonical link and preview image absolute. |
 | `in-development` | `true` shows an "under construction" banner. |
 
 ### `_data/personalInfo.json`
