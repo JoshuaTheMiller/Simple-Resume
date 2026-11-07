@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|CHANGELOG)!i) }
 
-  # 3.x is what the classic GitHub Pages build runs (3.10 today).
-  spec.add_runtime_dependency "jekyll", ">= 3.8", "< 4"
+  # Jekyll 4.3+ compiles Sass with Dart Sass (sass-embedded), which the @use syntax needs.
+  # The classic GitHub Pages build runs Jekyll 3; build with GitHub Actions instead.
+  spec.add_runtime_dependency "jekyll", ">= 4.3", "< 5"
 end
