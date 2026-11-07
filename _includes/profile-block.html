@@ -1,11 +1,11 @@
 <div class="profile-block">    
         <div class="profile-image-container">
-            <img class="profile-image" src="{{ site.data.personalInfo.profileImagePath }}">    
+            <img class="profile-image" src="{{ site.data.personalInfo.profileImagePath | relative_url }}">    
         </div>    
         {% if site.data.personalInfo.iconLinks %}
         <div class="profile-links-container">
         {% for link in site.data.personalInfo.iconLinks %}        
-            <a href="{{ link.url }}" target="_blank" rel="noopener"><img class="puffy-image" alt="{{ link.displayText }}" src="{{ link.displayImagePath }}" height="32" width="32"></a>        
+            <a href="{{ link.url }}" target="_blank" rel="noopener"><img class="puffy-image" alt="{{ link.displayText }}" src="{{ link.displayImagePath | relative_url }}" height="32" width="32"></a>        
         {% endfor %}
         </div>
         {% endif %}    
