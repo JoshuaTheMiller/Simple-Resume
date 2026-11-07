@@ -1,5 +1,5 @@
 <section class="experience-entry">
-    <a href="{{ include.url }}" target="_blank" rel="noopener"><img class="experience-entry-image puffy-image" src="{{ include.image }}"></a>
+    <a href="{{ include.url }}" target="_blank" rel="noopener"><img class="experience-entry-image puffy-image" src="{{ include.image | relative_url }}"></a>
     <div class="content">
         <h1>{{ include.position }}</h1>            
         <p><b><a href="{{ include.url }}" target="_blank" rel="noopener">{{ include.title }}</a></b> | <a href="https://www.google.com/maps/place/{{ include.location }}" target="_blank" rel="noopener">{{ include.location }}</a> | {{ include.dateRange.start | date: "%B %Y" }} to {% if include.dateRange.end and include.dateRange.end != "" and include.dateRange.end != "Present" %}{{ include.dateRange.end | date: "%B %Y" }}{% else %}Present{% endif %}</p>
