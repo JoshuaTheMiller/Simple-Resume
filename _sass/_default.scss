@@ -14,6 +14,43 @@
     --sr-banner: #ef5350;
 }
 
+/*
+  Dark mode, when the site opts in with `dark-mode: auto` in _config.yml (the layout then
+  adds the sr-dark-auto class to <html>) and the reader's system prefers dark.
+*/
+@media screen and (prefers-color-scheme: dark) {
+    html.sr-dark-auto {
+        color-scheme: dark;
+        --sr-text: #e3e6e8;
+        --sr-heading: #f4f6f7;
+        --sr-link: #9cc9c9;
+        --sr-link-hover: #ffffff;
+        --sr-link-underline: rgba(156, 201, 201, .45);
+        --sr-focus: #9cc9c9;
+        --sr-rule: rgba(255, 255, 255, .12);
+        --sr-surface: #1f2427;
+        --sr-surface-hover: rgba(255, 255, 255, .12);
+        --sr-banner: #b3261e;
+    }
+
+    html.sr-dark-auto,
+    html.sr-dark-auto body {
+        background-color: #171b1d;
+        /* The light pattern would glare on a dark page. */
+        background-image: none;
+    }
+
+    /* Icons drawn in black (GitHub's, the printer) would vanish on a dark page. */
+    html.sr-dark-auto .profile-links-container img {
+        background-color: #f4f6f7;
+        border-radius: 6px;
+    }
+
+    html.sr-dark-auto .print-button-image {
+        filter: invert(1);
+    }
+}
+
 html,
 body {
     margin:0;
@@ -233,6 +270,7 @@ ul {
 
 .print-button {    
     background-color: var(--sr-surface);
+    color: var(--sr-text); /* the border follows the text color */
     border: none;            
     padding: 5px;    
     text-align: center;

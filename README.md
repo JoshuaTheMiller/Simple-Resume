@@ -35,6 +35,7 @@ Then add the data files below. Images referenced from the data live in your own 
 |---|---|
 | `title` | The page title. |
 | `site-description` or `description` | The page's meta and social-preview description. `site-description` wins if both are set. |
+| `dark-mode` | `auto` follows the reader's system light or dark setting. Leave it out to always show the light theme. |
 | `lang` | The page language, `en` by default. |
 | `url` | Your site's address. GitHub Pages sets it for you; it makes the canonical link and preview image absolute. |
 | `in-development` | `true` shows an "under construction" banner. |
