@@ -15,8 +15,8 @@
 }
 
 /*
-  Dark mode, when the site opts in with `dark-mode: auto` in _config.yml (the layout then
-  adds the sr-dark-auto class to <html>) and the reader's system prefers dark.
+  Dark mode, when the reader's system prefers dark. On unless the site sets `dark-mode: off`
+  in _config.yml; the layout adds the sr-dark-auto class to <html> when it is on.
 */
 @media screen and (prefers-color-scheme: dark) {
     html.sr-dark-auto {
