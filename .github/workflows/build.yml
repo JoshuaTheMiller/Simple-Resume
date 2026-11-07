@@ -27,8 +27,8 @@ jobs:
           JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check the generated HTML
-        # Checks are switched on as the theme is fixed to pass them.
+        # Links, scripts, image alt text and the favicon.
         run: >
           bundle exec htmlproofer ./_site
           --disable-external
-          --checks Links,Scripts
+          --checks Links,Scripts,Images,Favicon
