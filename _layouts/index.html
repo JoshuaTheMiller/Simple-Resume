@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="experience-block">
-    <h1>Recent Projects</h1>
+    <h2>Recent Projects</h2>
     {% if site.data.projects %}
         {% assign sortedProjects = site.data.projects.projects | sort:"title" %}
         {% for project in sortedProjects %}
@@ -19,7 +19,7 @@ layout: default
     {% endif %}    
 </section>
 <section class="experience-block">
-    <h1>Employment History</h1>   
+    <h2>Employment History</h2>   
     {% if site.data.employment %} 
         {% comment %} Current roles (no end date, or "Present") first, newest start first; then past roles, newest end first. {% endcomment %}
         {% assign currentEmployers = "" | split: "" %}
