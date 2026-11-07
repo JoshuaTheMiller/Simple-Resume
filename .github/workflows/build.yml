@@ -23,6 +23,8 @@ jobs:
         run: bundle exec jekyll build --strict_front_matter
         env:
           JEKYLL_ENV: production
+          # GitHub Pages metadata (site.url, site.description) is looked up through the API.
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check the generated HTML
         # Checks are switched on as the theme is fixed to pass them.
