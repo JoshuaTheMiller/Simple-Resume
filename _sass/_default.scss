@@ -36,8 +36,7 @@
     html.sr-dark-auto,
     html.sr-dark-auto body {
         background-color: #171b1d;
-        /* The light pattern would glare on a dark page. */
-        background-image: none;
+        background-image: url("../images/circles-dark.png");
     }
 
     /* Icons drawn in black (GitHub's, the printer) would vanish on a dark page. */
