@@ -1,0 +1,10 @@
+{%- comment %}
+  The theme's own site-description key wins over site.description: on GitHub Pages,
+  jekyll-github-metadata fills site.description from the repository's GitHub description.
+{% endcomment %}
+{%- if page.description %}{% assign seo_description = page.description %}
+{%- elsif site["site-description"] %}{% assign seo_description = site["site-description"] %}
+{%- else %}{% assign seo_description = site.description %}{% endif -%}
+{%- if seo_description %}
+<meta name="description" content="{{ seo_description | strip_html | normalize_whitespace | escape }}">
+{%- endif %}
