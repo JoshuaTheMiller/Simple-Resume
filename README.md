@@ -8,26 +8,93 @@ See it in use at [joshuamiller.net](https://joshuamiller.net).
 
 ## Use it
 
-The theme runs on the classic GitHub Pages build (Jekyll 3.x). In your site's `_config.yml`:
+The theme is a Ruby gem for Jekyll 4.3 or later. GitHub Pages' classic build runs Jekyll 3, so
+build the site with GitHub Actions (see below); v1.x is the release line for the classic build.
 
-```yaml
-plugins:
-  - jekyll-remote-theme
+In your site's `Gemfile`, pin a release so theme changes reach your site only when you choose:
 
-# Pin a release so theme changes reach your site only when you choose.
-remote_theme: JoshuaTheMiller/Simple-Resume@v1.0.0
+```ruby
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.4"
+gem "simple-resume", git: "https://github.com/JoshuaTheMiller/Simple-Resume", tag: "v2.0.0"
 ```
 
-Add an `index.md` that uses the theme's layout:
+In `_config.yml`:
+
+```yaml
+theme: simple-resume
+title: Jane Doe's Resume
+description: The online resume of Jane Doe
+url: https://example.com
+```
+
+Add an `index.md` that uses the theme's layout. Leave out `title` (it would be added to the
+preview title); `image` is the picture shown when the link is shared:
 
 ```markdown
 ---
 layout: index
-title: Resume
+image: /images/profile.png
 ---
 ```
 
 Then add the data files below. Images referenced from the data live in your own repo.
+
+### Deploy with GitHub Actions
+
+Set the repository's **Settings → Pages → Source** to **GitHub Actions**, and add
+`.github/workflows/pages.yml`:
+
+```yaml
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+      - id: pages
+        uses: actions/configure-pages@v6
+      - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - uses: actions/upload-pages-artifact@v5
+        if: github.event_name != 'pull_request'
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+```
+
+Pull requests are built but not deployed. A custom domain is set under Settings → Pages; a `CNAME`
+file is not read by an Actions deploy.
 
 ### Site settings (`_config.yml`)
 
@@ -70,6 +137,18 @@ for a current role), and optional `notes[]` and `tagGroups[]`.
 Used by projects and employers: `tagGroups[]`, each with a `name` (shown as a label, such as
 "Technologies") and `tags[]`, each with `display` and an optional `url`.
 
+## Upgrading from v1
+
+1. Replace `remote_theme` and the `jekyll-remote-theme` plugin in `_config.yml` with
+   `theme: simple-resume`, add the `Gemfile` above, and run `bundle install` (commit the
+   `Gemfile.lock`).
+2. Rename `site-description` to `description`, and set `url`.
+3. In `index.md`, remove `title` and add `image` (your profile photo) for link previews.
+4. Add the Pages workflow and switch Settings → Pages → Source to GitHub Actions.
+5. If your own CSS targets the old headings: the name is `h1`, section titles are `h2`, entry
+   titles are `h3`.
+6. Dark mode is now on by default; add `dark-mode: off` to keep the light theme only.
+
 ## Develop it
 
 This repo is both the theme and a demo site with sample data. To preview it with live reload,
@@ -85,8 +164,8 @@ and reload the page.
 A dev container is also included (`.devcontainer/`) for VS Code or Codespaces. Inside it, run
 `bundle exec jekyll serve --config _config.yml,_config.demo.yml --livereload --force_polling`.
 
-Every pull request is built with the same gems GitHub Pages uses, and the generated HTML is checked
-with [html-proofer](https://github.com/gjtorikian/html-proofer).
+Every pull request builds the demo site and checks the generated HTML with
+[html-proofer](https://github.com/gjtorikian/html-proofer).
 
 ## Changes
 
