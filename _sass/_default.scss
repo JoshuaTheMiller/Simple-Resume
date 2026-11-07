@@ -1,5 +1,19 @@
 // I realize this isn't really a scss file... This is being done initially just for the easy compression.
 
+/* Colors live here so a color scheme (dark mode) can swap them in one place. */
+:root {
+    --sr-text: black;
+    --sr-heading: black;
+    --sr-link: darkslategrey;
+    --sr-link-hover: black;
+    --sr-link-underline: rgba(47, 79, 79, .4);
+    --sr-focus: darkslategrey;
+    --sr-rule: rgba(0, 0, 0, .05);
+    --sr-surface: white;
+    --sr-surface-hover: rgba(112, 128, 144, .25);
+    --sr-banner: #ef5350;
+}
+
 html,
 body {
     margin:0;
@@ -11,6 +25,7 @@ body {
     /* Eh this is how I made the font choice: https://www.huffingtonpost.com/2015/06/12/fonts-to-use-on-resume_n_7562714.html */
     /* font-family: "Helvetica"; */
     font-family: 'Raleway', sans-serif;
+    color: var(--sr-text);
 }
 
 body {
@@ -44,7 +59,7 @@ footer {
     right: 0;
     bottom: 0;
     height: 50px;
-    background: white;
+    background: var(--sr-surface);
     opacity: 1;
     font-size: 12px;    
 }
@@ -56,32 +71,32 @@ footer p {
 }
 
 a:link, a:visited, a:active {
-    color: darkslategrey;
+    color: var(--sr-link);
     text-decoration: none;
 }
 
 a:hover {
-    color: black;
+    color: var(--sr-link-hover);
     text-decoration: underline;
 }
 
 /* Links inside sentences need more than color to stand out from the text around them. */
 .content li a {
     text-decoration: underline;
-    text-decoration-color: rgba(47, 79, 79, .4);
+    text-decoration-color: var(--sr-link-underline);
     text-underline-offset: 2px;
 }
 
 /* Keyboard focus is always visible; mouse clicks don't draw it. */
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid darkslategrey;
+    outline: 2px solid var(--sr-focus);
     outline-offset: 2px;
     border-radius: 2px;
 }
 
 #under-construction-banner {
-    background-color: #ef5350;
+    background-color: var(--sr-banner);
     text-align: center;
     padding: 5px;
 }
@@ -166,12 +181,12 @@ ul {
 }
 
 .experience-block h1 {
-    color: black;    
+    color: var(--sr-heading);
     margin-top: 0px;
     margin-bottom: 5px;
     border-bottom-style: solid;
     border-width: 2px;
-    border-color: rgba(0, 0, 0, .05);
+    border-color: var(--sr-rule);
 }
 
 .experience-entry {
@@ -217,7 +232,7 @@ ul {
 /* -------------------------------------------------------------- */
 
 .print-button {    
-    background-color: white;
+    background-color: var(--sr-surface);
     border: none;            
     padding: 5px;    
     text-align: center;
@@ -239,7 +254,7 @@ ul {
 }
 
 .print-button:hover {
-    background-color: rgba(112, 128, 144, .25);
+    background-color: var(--sr-surface-hover);
 }
 
 /* Shown only on paper. */
