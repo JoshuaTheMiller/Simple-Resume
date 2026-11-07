@@ -6,6 +6,12 @@ All notable changes to this theme are recorded here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- **Breaking:** requires Jekyll 4.3 or later. The classic GitHub Pages build runs Jekyll 3, so sites must build with GitHub Actions (see the README).
+- Stylesheets compile with Dart Sass and load their partials with `@use`.
+- The dev preview and CI run on Ruby 3.4.
+
 ## [1.0.0] - 2026-11-06
 
 ### Changed
