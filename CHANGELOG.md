@@ -12,6 +12,7 @@ All notable changes to this theme are recorded here. The format follows
 - **Breaking:** a heading hierarchy: your name is the `h1`, section titles (`.experience-block`) are `h2`, entry titles (`.experience-entry`) are `h3`. Sizes are unchanged, but your own CSS that targets the old `h1`s needs updating. The under-construction banner is a `<p role="status">`.
 - **Breaking:** title, description, canonical, Open Graph and Twitter tags come from `jekyll-seo-tag` (a new dependency). The description is read from `description` only; rename `site-description`. The preview image comes from `image` (front matter or config) rather than the profile photo. A `title` in `index.md` now shows up in the preview title, so remove it.
 - **Breaking:** dark mode is on by default and follows the reader's system setting. Set `dark-mode: off` to keep the light theme only.
+- The theme ships a `_config.yml` of defaults (the SEO plugin, compressed Sass, HTML compression), which Jekyll 4 merges beneath a site's own config. The demo site's settings moved to `_config.demo.yml`.
 - Stylesheets compile with Dart Sass and load their partials with `@use`.
 - The dev preview and CI run on Ruby 3.4.
 

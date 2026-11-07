@@ -6,7 +6,7 @@ services:
     working_dir: /srv/site
     command: >
       sh -c "bundle install --quiet &&
-             bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling"
+             bundle exec jekyll serve --config _config.yml,_config.demo.yml --host 0.0.0.0 --livereload --force_polling"
     ports:
       - "4000:4000"
       - "35729:35729"

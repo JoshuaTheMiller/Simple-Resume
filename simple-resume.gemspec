@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
     "homepage_uri"      => "https://joshuamiller.net",
   }
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|CHANGELOG)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|_config\.yml$|LICENSE|README|CHANGELOG)!i) }
 
   # Jekyll 4.3+ compiles Sass with Dart Sass (sass-embedded), which the @use syntax needs.
   # The classic GitHub Pages build runs Jekyll 3; build with GitHub Actions instead.
