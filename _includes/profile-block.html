@@ -24,5 +24,15 @@
             </p>
         </div>
         {% endif %}
+        {% if site.data.personalInfo.iconLinks %}
+        {% assign personalUrls = site.data.personalInfo.personalLinks | map: "url" %}
+        <p class="print-only profile-print-links">
+            {% for link in site.data.personalInfo.iconLinks %}
+                {% unless personalUrls contains link.url %}
+                <span>{{ link.displayText }}: {{ link.url | remove_first: "https://" | remove_first: "http://" | remove_first: "www." | split: "?" | first }}</span>
+                {% endunless %}
+            {% endfor %}
+        </p>
+        {% endif %}
     </div>
 </div>

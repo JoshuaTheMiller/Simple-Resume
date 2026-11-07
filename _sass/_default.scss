@@ -242,6 +242,11 @@ ul {
     background-color: rgba(112, 128, 144, .25);
 }
 
+/* Shown only on paper. */
+.print-only {
+    display: none;
+}
+
 @media print {
     .profile-block {
         display: grid;
@@ -300,6 +305,15 @@ ul {
         margin: 0px;
         padding: 0px; 
         font-weight: lighter;
+    }
+
+    /* The icon links are hidden in print, so their addresses are written out instead. */
+    .print-only {
+        display: block;
+    }
+
+    .profile-print-links span + span::before {
+        content: " · ";
     }
 }
 
