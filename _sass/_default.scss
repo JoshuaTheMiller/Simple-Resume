@@ -132,6 +132,10 @@ button:focus-visible {
 }
 
 #under-construction-banner {
+    /* Looks like the h1 it used to be; it isn't a heading, so it's a status line now. */
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 .67em;
     background-color: var(--sr-banner);
     text-align: center;
     padding: 5px;
@@ -208,7 +212,13 @@ ul {
     margin-bottom: 10px;
 }
 
-.experience-block h1 {
+/* Section and entry titles keep the size they had when every heading was an h1. */
+.experience-block h2,
+.experience-entry h3 {
+    font-size: 2em;
+}
+
+.experience-block h2 {
     color: var(--sr-heading);
     margin-top: 0px;
     margin-bottom: 5px;
@@ -223,7 +233,7 @@ ul {
     margin-top: 15px;
 }
 
-.experience-entry h1 {
+.experience-entry h3 {
     margin-top: -3px;
     margin-bottom: 5px;
     border-style: none;    
@@ -323,7 +333,7 @@ ul {
         display: none;
     }
 
-    header, main, h1, .experience-entry {            
+    header, main, h1, h2, h3, .experience-entry {            
         padding: 0px;  
         margin: 0px;                     
     }
@@ -333,7 +343,7 @@ ul {
         text-decoration: none;
     }
     
-    h1 {
+    h1, h2, .experience-block h2, .experience-entry h3 {
         font-size: 14px;
     }
 
@@ -350,7 +360,7 @@ ul {
         margin-left: 5px;
     }
 
-    .experience-entry h1 {
+    .experience-entry h3 {
         margin-top: 5px;             
     }
 
@@ -378,7 +388,7 @@ ul {
         page-break-inside: avoid;
     }
 
-    .experience-block > h1 {
+    .experience-block > h2 {
         break-after: avoid;
         page-break-after: avoid;
     }

@@ -3,7 +3,7 @@
     <img class="experience-entry-image" alt="{{ include.imageAlt | default: include.title | escape }}" src="{{ include.image | relative_url }}">
     {% endif %} 
     <div class="content">
-        <h1><a href="{{ include.url }}" target="_blank" rel="noopener">{{ include.title }}</a> <span class="experience-entry-link">{{ include.url }}</span></h1>    
+        <h3><a href="{{ include.url }}" target="_blank" rel="noopener">{{ include.title }}</a> <span class="experience-entry-link">{{ include.url }}</span></h3>    
         <p>{{ include.subtitle }}</p>
         {% if include.notes %}
         <ul>
