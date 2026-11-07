@@ -17,3 +17,14 @@ compress_html:
   blanklines: true
   profile: false
   startings: all
+
+# Repository files that are not part of the demo site.
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - compose.yaml
+  - simple-resume.gemspec
+  - Gemfile
+  - Gemfile.lock
+  - vendor
