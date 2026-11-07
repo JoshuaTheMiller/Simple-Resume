@@ -2,7 +2,7 @@
     "employers":[
         {
             "title":"Garmin",
-            "url":"http://www.garmin.com",
+            "url":"https://www.garmin.com",
             "image":"images/employers/icon_garmin.png",
             "short_description":"While officially given the position of Process Engineering Intern, my main duties involved writing applications to solve various problems.",
             "position":"Process Engineering Intern",
@@ -76,7 +76,7 @@
         },
         {
             "title":"University of Wisconsin - Stout",
-            "url":"http://www.uwstout.edu/",
+            "url":"https://www.uwstout.edu/",
             "image":"images/employers/icon_uws.png",
             "short_description":"",
             "position":"Supplemental Instructor",
