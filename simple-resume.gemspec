@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   # Jekyll 4.3+ compiles Sass with Dart Sass (sass-embedded), which the @use syntax needs.
   # The classic GitHub Pages build runs Jekyll 3; build with GitHub Actions instead.
   spec.add_runtime_dependency "jekyll", ">= 4.3", "< 5"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
 end

@@ -1,9 +1,12 @@
 title: A Resume
 email: resume@joshuadmiller.info
-site-description: This is the site description
+description: This is the site description
 in-development: true
 baseurl: ""
 url:
+
+plugins:
+  - jekyll-seo-tag
 
 sass:
     style: compressed

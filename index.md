@@ -1,4 +1,4 @@
 ---
 layout: index
-title: Resume
+image: /images/profile.png
 ---
