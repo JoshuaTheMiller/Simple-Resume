@@ -9,6 +9,7 @@ All notable changes to this theme are recorded here. The format follows
 ### Changed
 
 - **Breaking:** requires Jekyll 4.3 or later. The classic GitHub Pages build runs Jekyll 3, so sites must build with GitHub Actions (see the README).
+- **Breaking:** a heading hierarchy: your name is the `h1`, section titles (`.experience-block`) are `h2`, entry titles (`.experience-entry`) are `h3`. Sizes are unchanged, but your own CSS that targets the old `h1`s needs updating. The under-construction banner is a `<p role="status">`.
 - Stylesheets compile with Dart Sass and load their partials with `@use`.
 - The dev preview and CI run on Ruby 3.4.
 
