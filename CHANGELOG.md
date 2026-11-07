@@ -6,6 +6,8 @@ All notable changes to this theme are recorded here. The format follows
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-06
+
 ### Changed
 
 - The gemspec allows any Jekyll 3.x from 3.8 on, so gem users get the 3.10 that GitHub Pages runs.
@@ -53,5 +55,6 @@ All notable changes to this theme are recorded here. The format follows
 
 The theme as it stood before this changelog began.
 
-[Unreleased]: https://github.com/JoshuaTheMiller/Simple-Resume/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/JoshuaTheMiller/Simple-Resume/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/JoshuaTheMiller/Simple-Resume/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/JoshuaTheMiller/Simple-Resume/releases/tag/v0.1.0
