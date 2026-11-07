@@ -1,9 +1,7 @@
 {
-    "name": "Jekyll Builder",
-    "dockerFile": "Dockerfile",
-    "extensions": [],
-    "forwardPorts": [
-        4000
-    ],
-    "postCreateCommand": "bundle install"    
+    "name": "Simple-Resume",
+    "image": "mcr.microsoft.com/devcontainers/jekyll:2-bookworm",
+    "forwardPorts": [4000, 35729],
+    "postCreateCommand": "bundle install",
+    "postAttachCommand": "echo 'Preview: bundle exec jekyll serve --livereload --force_polling'"
 }

@@ -1,0 +1,18 @@
+# Live preview of the theme with its sample data: `docker compose up`, then open http://localhost:4000.
+# Edits to layouts, includes, styles and data rebuild automatically and reload the page.
+services:
+  jekyll:
+    image: ruby:3.3
+    working_dir: /srv/site
+    command: >
+      sh -c "bundle install --quiet &&
+             bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling"
+    ports:
+      - "4000:4000"
+      - "35729:35729"
+    volumes:
+      - .:/srv/site
+      - bundle:/usr/local/bundle
+
+volumes:
+  bundle:
