@@ -263,8 +263,20 @@ ul {
         visibility: hidden;
     }
 
+    @page {
+        margin: 0.5in;
+    }
+
+    html, body {
+        background: none;
+    }
+
     body {
         display: initial;
+    }
+
+    #under-construction-banner {
+        display: none;
     }
 
     header, main, h1, .experience-entry {            
