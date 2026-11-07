@@ -65,6 +65,21 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Links inside sentences need more than color to stand out from the text around them. */
+.content li a {
+    text-decoration: underline;
+    text-decoration-color: rgba(47, 79, 79, .4);
+    text-underline-offset: 2px;
+}
+
+/* Keyboard focus is always visible; mouse clicks don't draw it. */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid darkslategrey;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 #under-construction-banner {
     background-color: #ef5350;
     text-align: center;
