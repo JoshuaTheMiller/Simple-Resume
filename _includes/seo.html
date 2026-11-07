@@ -1,34 +1,9 @@
 {%- comment %}
-  The theme's own site-description key wins over site.description: on GitHub Pages,
-  jekyll-github-metadata fills site.description from the repository's GitHub description.
+  Title, description, canonical link, Open Graph and Twitter tags come from jekyll-seo-tag.
+  Set `description` (and optionally `image`) in _config.yml or the page's front matter.
 {% endcomment %}
-{%- if page.description %}{% assign seo_description = page.description %}
-{%- elsif site["site-description"] %}{% assign seo_description = site["site-description"] %}
-{%- else %}{% assign seo_description = site.description %}{% endif -%}
-{%- if seo_description %}
-<meta name="description" content="{{ seo_description | strip_html | normalize_whitespace | escape }}">
-{%- endif %}
-{%- assign seo_title = page.seo_title | default: site.title %}
+{% seo title=false %}
 {%- assign seo_person = site.data.personalInfo %}
-{%- if site.url and site.url != "" %}
-<link rel="canonical" href="{{ page.url | absolute_url }}">
-<meta property="og:url" content="{{ page.url | absolute_url }}">
-{%- endif %}
-<meta property="og:type" content="profile">
-<meta property="og:title" content="{{ seo_title | escape }}">
-{%- if seo_description %}
-<meta property="og:description" content="{{ seo_description | strip_html | normalize_whitespace | escape }}">
-{%- endif %}
-{%- if seo_person.firstName %}
-<meta property="profile:first_name" content="{{ seo_person.firstName | escape }}">
-{%- endif %}
-{%- if seo_person.lastName %}
-<meta property="profile:last_name" content="{{ seo_person.lastName | escape }}">
-{%- endif %}
-{%- if seo_person.profileImagePath and site.url and site.url != "" %}
-<meta property="og:image" content="{{ seo_person.profileImagePath | absolute_url }}">
-{%- endif %}
-<meta name="twitter:card" content="summary">
 {%- comment %} schema.org Person, so search engines read the page as someone's resume. {% endcomment %}
 {%- assign seo_current = nil %}
 {%- for employer in site.data.employment.employers %}
