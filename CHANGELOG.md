@@ -12,6 +12,8 @@ All notable changes to this theme are recorded here. The format follows
 - Line endings are normalized to LF.
 - The footer year is written at build time instead of showing 0000 until JavaScript runs.
 - The footer credit links to joshuamiller.net.
+- Raleway is self-hosted (variable font, Latin and Latin Extended) instead of loaded from Google Fonts. Headings now use Raleway's real bold, so they look heavier than the synthesized bold before. Text shows in a fallback font until Raleway loads.
+- Links inside bullet points are underlined, so they don't rely on color alone.
 - `compress.html` is updated to 3.2.0, so a page can opt out with `compress_html: false`.
 
 ### Added
@@ -21,12 +23,14 @@ All notable changes to this theme are recorded here. The format follows
 - A README covering the data files and settings.
 - `<html lang>`, from `site.lang` (default `en`).
 - An employer with no `end` date is treated as a current role, like `"Present"`.
+- A visible outline on links and buttons focused from the keyboard.
 
 ### Fixed
 
 - A site with no `personalLinks` got a stray `</p></div>` that closed the description early.
 - Current roles sorted first only because `"Present"` sorts after digits; they are now placed first on purpose.
 - Links that open a new tab carry `rel="noopener"`.
+- The print button has an accessible name; it was announced only as "button".
 
 ### Removed
 
