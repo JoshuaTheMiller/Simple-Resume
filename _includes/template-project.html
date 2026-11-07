@@ -1,6 +1,6 @@
 <section class="experience-entry">
     {% if include.image %}
-    <img class="experience-entry-image" src="{{ include.image | relative_url }}">
+    <img class="experience-entry-image" alt="{{ include.imageAlt | default: include.title | escape }}" src="{{ include.image | relative_url }}">
     {% endif %} 
     <div class="content">
         <h1><a href="{{ include.url }}" target="_blank" rel="noopener">{{ include.title }}</a> <span class="experience-entry-link">{{ include.url }}</span></h1>    

@@ -12,7 +12,9 @@ layout: default
                 subtitle=project.short_description 
                 notes=project.notes
                 tagGroups=project.tagGroups
-                url=project.url %}
+                url=project.url
+                image=project.image
+                imageAlt=project.imageAlt %}
         {% endfor %}
     {% endif %}    
 </section>
@@ -42,6 +44,7 @@ layout: default
                 notes=employer.notes 
                 url=employer.url 
                 image=employer.image
+                imageAlt=employer.imageAlt
                 tagGroups=employer.tagGroups %}
         {% endfor %}
     {% endif %} 
