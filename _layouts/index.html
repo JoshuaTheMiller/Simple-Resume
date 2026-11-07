@@ -19,7 +19,19 @@ layout: default
 <section class="experience-block">
     <h1>Employment History</h1>   
     {% if site.data.employment %} 
-        {% assign sortedEmployers = site.data.employment.employers | sort:"dateRange.end" | reverse %}
+        {% comment %} Current roles (no end date, or "Present") first, newest start first; then past roles, newest end first. {% endcomment %}
+        {% assign currentEmployers = "" | split: "" %}
+        {% assign pastEmployers = "" | split: "" %}
+        {% for employer in site.data.employment.employers %}
+            {% if employer.dateRange.end == nil or employer.dateRange.end == "" or employer.dateRange.end == "Present" %}
+                {% assign currentEmployers = currentEmployers | push: employer %}
+            {% else %}
+                {% assign pastEmployers = pastEmployers | push: employer %}
+            {% endif %}
+        {% endfor %}
+        {% assign currentEmployers = currentEmployers | sort: "dateRange.start" | reverse %}
+        {% assign pastEmployers = pastEmployers | sort: "dateRange.end" | reverse %}
+        {% assign sortedEmployers = currentEmployers | concat: pastEmployers %}
         {% for employer in sortedEmployers %}
             {% include template-employer.html 
                 title=employer.title 
